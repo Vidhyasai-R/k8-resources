@@ -13,6 +13,7 @@ spec:
   # replicaset use these labels to find the pods for creating desired number of replicas
     matchLabels:
       tier: frontend
+      tier: web
   # pod template
   template:
     metadata:
@@ -22,4 +23,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx:stable-perl
